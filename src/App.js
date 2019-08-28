@@ -1,28 +1,19 @@
 import React, { Fragment } from 'react';
+import Header from "./components/Header";
+import ListaProductos from "./components/ListaProductos";
+import Footer from "./components/Footer";
 
 function App() {
 
-  const empleado = {
-    nombre: 'Juan Pablo',
-    trabajo: 'Desarrollador Web'
-  }
-
   return (
-    // <div className="App">
-    //   <h1>Hola Mundo!</h1>
-    // </div>
-
-    // Without JSX
-    // React.createElement(
-    //   'h1',
-    //   {id: 'heading', className: 'heading'},
-    //   'Hola Mundo'
-    // )
-
-    // With JSX
     <Fragment>
-      <h1>{empleado.nombre}</h1>
-      <h1>{empleado.trabajo}</h1>
+      <Header 
+        titulo="Tienda Virtual"
+      />
+
+      <ListaProductos />
+
+      <Footer />
     </Fragment>
   );
 }
