@@ -3,14 +3,37 @@ import Producto from "./Producto";
 
 class ListaProductos extends Component {
     state = {
-        productos : [
-            { id: 1, nombre: 'Camisa ReactJS', precio: 30},
-            { id: 2, nombre: 'Camisa AngularJS', precio: 30},
-            { id: 3, nombre: 'Camisa VueJS', precio: 30},
-            { id: 4, nombre: 'Camisa Node.JS', precio: 30}
-        ]
+        productos : []
     }
+
+    componentDidMount() {
+        console.log(1)
+        this.setState({
+            productos: [
+                { id: 1, nombre: 'Camisa ReactJS', precio: 30},
+                { id: 2, nombre: 'Camisa AngularJS', precio: 30},
+                { id: 3, nombre: 'Camisa VueJS', precio: 30},
+                { id: 4, nombre: 'Camisa Node.JS', precio: 30}
+            ]
+        })
+    }
+    
+    componentWillMount() {
+        console.log(2)
+    }
+
+    componentWillUpdate(){
+        console.log(3)
+    }
+
+    componentWillUnmount(){
+        console.log(4)
+    }
+
     render() {
+
+        console.log(5)
+
         const {productos} = this.state;
         console.log(productos);
 
